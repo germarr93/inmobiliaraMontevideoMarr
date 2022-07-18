@@ -14,9 +14,10 @@
 } */
 .titulo
 {
-  color:rgb(250, 246, 253);
+  color:rgb(16, 11, 5);
   font-size: 30px;
   text-align: center;
+  border-color: brown;
 }
 /* .logo {
   height: 10vmin;

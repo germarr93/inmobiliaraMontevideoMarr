@@ -43,5 +43,6 @@
     "url": "main"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {}
 }

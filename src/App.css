@@ -1,8 +1,8 @@
 :root {
-  --titulo: #61dafb;
-  --fondo: #282c34;
-  --texto: rgb(255, 253, 255);
-  --otro: rgb(139, 139, 139);
+  --titulo: #6180fb;
+  --fondo: hsla(200, 13%, 91%, 0.573);
+  --texto: rgb(5, 1, 1);
+  --otro: rgb(254, 83, 83);
 }
 
 *{
@@ -52,5 +52,5 @@ button:hover{
 }
 
 span{
-  color: red;
+  color: rgb(16, 2, 48);
 }
