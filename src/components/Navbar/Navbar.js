@@ -1,24 +1,22 @@
 import CartWidget from "./CartWidget";
 // import logo from "./logo.svg";
 import "./Navbar.css"
-
+import {Link,NavLink} from "react-router-dom"; 
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="logo-container">
-        {/* <img src={logo} alt="logo" className="logo"/> */}
-        <h1 className="titulo"> Inmobiliaria Montevideo</h1>
-      </div>
+      <Link to="/"  className="logo-container">
+        <h1 className="titulo">Inmobiliaria Montevideo</h1>
+         {/* <img src={logo} alt="logo" className="logo"/> */}
+      </Link>
       <div className="link-container"> 
-        <ul className="uls">
-          <a href="#" className="link">Hogares Nuevos</a>
-          <a href="#" className="link">Imagenes</a>
-          <a href="#" className="link">Apartamentos</a>
-
+        <ul >
+          <NavLink to="/categorias/hogaresNuevos" className={({isActive})=>isActive ? "link-activo" : "link"}>Hogares Nuevos</NavLink>
+          <NavLink to="/categorias/apartamentos"className={({isActive})=>isActive ? "link-activo" : "link"}>Apartamentos</NavLink>
+          <NavLink to="/categorias/imagenes" className={({isActive})=>isActive ? "link-activo": "link"}>Imagenes</NavLink>
           <CartWidget />
         </ul>
-       
       </div>
     </nav>
   );

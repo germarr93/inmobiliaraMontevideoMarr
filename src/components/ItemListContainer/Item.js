@@ -1,6 +1,6 @@
 import "./Item.css";
-
-const Item = ({nombre, imgItem, extra}) => {
+import { Link } from "react-router-dom"; //creamos el link
+const Item = ({nombre, imgItem, extra,id}) => {
 
   return (
     <div className="card-container">
@@ -10,7 +10,8 @@ const Item = ({nombre, imgItem, extra}) => {
 
       <h3 className="">{nombre}</h3>
       {extra && <span>{extra}</span> }
-      <button>DETALLE</button>
+      <Link to={`/item/${id}`}>< button>Detalles</button></Link>
+      
     </div>
   );
 };
