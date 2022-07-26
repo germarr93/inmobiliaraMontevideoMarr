@@ -19,7 +19,7 @@ const ItemDetailContainer = () => {
       setItem(respuesta)
     }      
     )
-  },[id])
+  },[id, traerItemPorId])
 
 
 

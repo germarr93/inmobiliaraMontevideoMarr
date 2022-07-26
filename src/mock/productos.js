@@ -27,7 +27,7 @@ const articulos = [
     precio: 25500,
     categoria: "apartamentos",
     imgItem: "/img/components.jpg", 
-    imgDetalle: "/img/class.jpg",
+    imgDetalle: "/img/funcion.jpg",
     stock: 3,
     descripcion:"Proximamente "
   },
