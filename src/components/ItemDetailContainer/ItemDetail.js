@@ -2,6 +2,7 @@ import "./ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
 import { useContext, useState } from "react";
 import { CartContext } from "../../context/cartContext";
+import { NavLink } from "react-router-dom";
 
 const ItemDetail = ({item}) => {
   const [cantidad,setCantidad] = useState(0); 
@@ -32,10 +33,9 @@ const ItemDetail = ({item}) => {
         <p>
           {descripcion}
         </p>
-        {/* { cantidad === 0 ? */} 
-        <ItemCount stock={stock} precio={precio} onAdd={onAdd}/>
-          {/* // : <link to="/cart">Ir al carrito</link>  */}
-        
+        {cantidad === 0 ? ( 
+          <ItemCount stock={stock} precio={precio} onAdd={onAdd}/>
+         ) : ( <NavLink to="/cart">Ir al carrito</NavLink> )}
         </div>
     </div>
   );
