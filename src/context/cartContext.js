@@ -9,9 +9,23 @@ export const CartContext = createContext();
 // para poder visualizar la pantalla los componantes.
 const Provider = (props)=>{
     const [cart, setCart] = useState([])
+    const [suma,setSuma] = useState([0])
 
+
+    const totalCart = () =>
+    {
+        let suma = 0;
+
+        cart.forEach(item => suma += (item.precio * item.stock))
+        setSuma(suma)
+    
+    }
+
+
+    //Escucha los cambios del carrito si suma o no
     useEffect(()=>{
         console.log(cart)
+        totalCart()
     },[cart])
 
 
@@ -34,7 +48,7 @@ const Provider = (props)=>{
       return cart.some((prod) => prod.id === id)
     }
 
-    //Funcion borrar
+    //Funcion que trae los articulos distintos al 
     const deleteOne = (id) =>
     {
         const articulos = cart.filter((prod)=> prod.id !== id);
