@@ -27,7 +27,7 @@ const ItemCount = ({ stock, initial = 1, precio, onAdd }) => {
       </h4>
     
     </div>
-    <span style={{color:"whitesmoke", fontSize:"1.2em"}}><b>Total: ${count * precio}</b></span>
+    <span style={{color:"blue", fontSize:"1.2em"}}><b>Total: ${count * precio}</b></span>
     <button className="agregar" onClick={()=>onAdd(count)}>AGREGAR AL CARRITO</button>
     </>
   );
