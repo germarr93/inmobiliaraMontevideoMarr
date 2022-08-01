@@ -19,7 +19,7 @@ const articulos = [
     imgDetalle: "/img/usestate.jpg",
     stock: 22,
     descripcion:
-      "Disfruta todo el verano en nuestra casa"
+      "Esta oficina obtiene todo para comenzar tu empresa"
   },
   {
     nombre: "Oficina de Segundo Piso",
@@ -29,7 +29,7 @@ const articulos = [
     imgItem: "/img/components.jpg", 
     imgDetalle: "/img/funcion.jpg",
     stock: 3,
-    descripcion:"Proximamente "
+    descripcion:"Esta oficina obtiene todo para comenzar tu empresa "
   },
   {
     nombre: "Quienes somos",
@@ -40,7 +40,7 @@ const articulos = [
     imgDetalle: "/img/useeffect.jpg",
     stock: 14,
     descripcion:
-      "Sera implementada con descripcion"
+      " Esta oficina obtiene todo para comenzar tu empresa"
   }
 ];
 

@@ -6,10 +6,10 @@ import {Link,NavLink} from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <Link to="/"  className="logo-container">
+      <NavLink to="/"  className="logo-container">
         <h1 className="titulo">Inmobiliaria Montevideo</h1>
          {/* <img src={logo} alt="logo" className="logo"/> */}
-      </Link>
+      </NavLink>
       <div className="link-container"> 
         <ul >
           <NavLink to="/categorias/hogaresNuevos" className={({isActive})=>isActive ? "link-activo" : "link"}>Hogares Nuevos</NavLink>
