@@ -31,10 +31,22 @@ const Provider = (props)=>{
     const isInCart = (id) =>
     {
         //saber si esta o no, devuelve un true or false la funcion
-      return cart.some(prod => prod.id === id)
+      return cart.some((prod) => prod.id === id)
     }
+
+    //Funcion borrar
+    const deleteOne = (id) =>
+    {
+        const articulos = cart.filter((prod)=> prod.id !== id);
+        setCart(articulos);
+    }
+    const deleteAll = () =>
+    {
+        setCart([])
+    }
+
    return(
-     <CartContext.Provider value={{cart,addToCart}}>
+     <CartContext.Provider value={{cart,addToCart,deleteOne,deleteAll}}>
         {props.children}
      </CartContext.Provider>
     )
