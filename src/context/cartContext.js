@@ -42,9 +42,11 @@ const Provider = (props)=>{
       
     }
 
+    //funcion que busca si el item esta en el carrito
+    ////saber si esta o no, devuelve un true or false la funcion
     const isInCart = (id) =>
     {
-        //saber si esta o no, devuelve un true or false la funcion
+            
       return cart.some((prod) => prod.id === id)
     }
 
