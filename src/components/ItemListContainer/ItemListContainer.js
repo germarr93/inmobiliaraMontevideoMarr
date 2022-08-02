@@ -2,37 +2,57 @@ import {useState, useEffect} from "react"
 import ItemList from "./ItemList"
 import articulos from "../../mock/productos"
 import { useParams } from "react-router-dom"
-import Loader from "../Loader/Loader"
 
 
 const ItemListContainer = () => {
+
   const [items, setItems] = useState([])
   const [loading,setLoading] = useState(false)
   const {categoria} = useParams()
   
 
-  const traerItems = () => {
-    return new Promise((resolve)=>{
-      setTimeout(()=>{
-      resolve(categoria ? articulos.filter(obj => 
-        obj.categoria === categoria) : articulos)
-      }, 500)
-    }) 
-  }
+  useEffect(() =>  {
 
-  useEffect(()=>{
-    traerItems().then(res =>{
-      setItems(res)
-    })
-  },[categoria])
+    setLoading(true)
+  const traerArticulos = new Promise((res,rej)=>{
+      const articulosFiltrdados =articulos.filter(
+        (articulo) => articulo.categoria === categoria);
+
+        setTimeout(()=>{
+          categoria ? res(articulosFiltrdados): res(articulos)
+        },3000)  
+      });
+
+      traerArticulos
+        .then((data)=>{
+          setItems(data)
+          setLoading(false);
+        })
+        .catch((error)=>{
+          console.log(error)
+        })},[categoria]);
+
 //se define para cuando haya solo un cambio para esa variable.
+return (
+  <div
+      style={{
+          display: 'flex',
+          justifyContent: 'center',
+      }}
+  >
+      {/* <h2
+          className={loading ? 'grande' : 'chico'}
+          style={{ color: loading ? 'red' : 'blue' }}
+      >
+          {saludo}
+      </h2> */}
+      {loading ? (
+          <h1>Cargando productos...</h1>
+      ) : (
+          <ItemList items={items} />
+      )}
+  </div>
+);
+};
 
-  return (
-  <ItemList items={items} />
-  )
-}
-
-export default ItemListContainer
-
-
-
+export default ItemListContainer;
