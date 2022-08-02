@@ -10,12 +10,13 @@ const ItemDetail = ({item}) => {
   const {nombre, precio, imgDetalle, stock, descripcion, extra} = item
  
 
- 
-    const onAdd = (cantidad) => {
+   const onAdd = (cantidad) => {
     // console.log("seleccionaste ", cantidad, " items")
     setCantidad(cantidad);
     addToCart(item,cantidad); //le paso el detalle y cantida 
   }
+
+
 
   return (
     <div className="itemDetail">

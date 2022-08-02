@@ -5,9 +5,7 @@
   --otro: rgb(254, 83, 83);
 }
 
-*{
-  box-sizing: content-box;
-}
+
 
 body {
   margin: 0;
@@ -38,17 +36,21 @@ a:link, a:visited, a:active {
 
 button{
   background: transparent;
+  width: 100px;
   color: var(--titulo);
   padding: 10px;
   font-size: 1em;
+  
   text-decoration: none;
   border: 2px solid var(--titulo);
   border-radius: 7px;
+  height: 30px;
 }
 
 button:hover{
   background: var(--titulo);
   color: var(--fondo);
+  
 }
 
 span{

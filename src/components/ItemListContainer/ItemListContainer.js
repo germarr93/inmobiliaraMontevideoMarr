@@ -7,6 +7,7 @@ import Loader from "../Loader/Loader"
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([])
+  const [loading,setLoading] = useState(false)
   const {categoria} = useParams()
   
 
